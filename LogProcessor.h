@@ -32,7 +32,7 @@ private:
     std::queue<std::string> lineQueue; // Queue for lines to be processed
     std::condition_variable cv; // Condition variable for signaling
     const int MAX_THREADS = 4; // Maximum number of threads
-    const int BATCH_SIZE = 10; // Adjust as needed
+    const int BATCH_SIZE = 10; // Batch size for insertion
     bool stopWorkers = false; // Flag to stop worker threads
 };
 

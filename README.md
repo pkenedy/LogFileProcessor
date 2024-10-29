@@ -54,20 +54,28 @@ The application ensures that all worker threads are properly joined and stopped 
 2. **Build the Application**:
     Ensure that you have the SQLite library installed, and then compile the application:
     ```bash
-    g++ -std=c++11 -pthread -lsqlite3 -o logprocessor LogProcessor.cpp
-    ```
+     g++ -o LogFileProcessor main.cpp LogProcessor.cpp -lsqlite3 -lpthread
+
 
 3. **Run the Application**:
     ```bash
-    ./logprocessor <path_to_database> <path_to_logfile>
-    ```
+    ./LogFileProcessor 
+    
 
-4. **Example**:
-    ```bash
-    ./logprocessor logs.db system_logs.txt
-    ```
+4. **Database Verification
 
-This command will read the log file (`system_logs.txt`), process its content, and store it in the `logs.db` database.
+After running the program, you can verify the entries in the database by opening it using SQLite:
+
+bash
+
+sqlite3 logs.db
+
+Then execute the following commands:
+
+sql
+
+.tables               -- To list the tables
+SELECT * FROM logs;  -- To see the entries in the logs table
 
 ## Dependencies
 

@@ -1,12 +1,13 @@
 #include "LogProcessor.h"
+#include <iostream>
 
 int main(int argc, char* argv[]) {
-    if (argc != 3) {
-        std::cerr << "Usage: " << argv[0] << " <database_file> <log_file>" << std::endl;
-        return 1;
-    }
+    // Simulate command-line arguments for testing purposes
+    std::string dbFile = "logs.db";
+    std::string logFile = "C:/Users/paul/Documents/LogFileProcessor/my_log.log"; // Update to your log file path
+
+    LogProcessor logProcessor(dbFile);
+    logProcessor.processLogFile(logFile);
     
-    LogProcessor logProcessor(argv[1]); // Database file from command line
-    logProcessor.processLogFile(argv[2]); // Log file from command line
     return 0;
 }
