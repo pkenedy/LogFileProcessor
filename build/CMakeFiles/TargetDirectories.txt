@@ -1,0 +1,3 @@
+/c/users/paul/Documents/LogFileProcessor/build/CMakeFiles/LogFileProcessor.dir
+/c/users/paul/Documents/LogFileProcessor/build/CMakeFiles/edit_cache.dir
+/c/users/paul/Documents/LogFileProcessor/build/CMakeFiles/rebuild_cache.dir
